@@ -6,7 +6,6 @@
     <title id="page-title">Legit Shop - Hệ thống kích hoạt ChatGPT Plus tự động</title>
     <link rel="icon" href="legit.png" type="image/png">
     
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -21,7 +20,6 @@
         }
     </script>
     
-    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     
     <style>
@@ -52,7 +50,7 @@
             <img src="legit.png" alt="Legit Shop" class="w-16 h-16 object-cover z-10 rounded-xl" onerror="this.onerror=null; this.outerHTML='<i data-lucide=\\\'shield\\\' class=\\\'text-blue-600 dark:text-blue-400 w-12 h-12 z-10\\\'></i>'" />
         </div>
         <h2 class="text-slate-800 dark:text-white font-bold text-xl tracking-[0.15em] uppercase mb-2">Legit Shop</h2>
-        <p id="loading-text" class="text-blue-600 dark:text-blue-400 text-sm font-medium animate-pulse">Đang kết nối GitHub...</p>
+        <p id="loading-text" class="text-blue-600 dark:text-blue-400 text-sm font-medium animate-pulse">Đang kết nối API OpenCodex...</p>
     </div>
 
     <!-- Navigation -->
@@ -65,7 +63,7 @@
                 </a>
                 <div id="nav-title" class="font-semibold text-sm sm:text-lg text-blue-200 tracking-wide text-center">Hệ thống kích hoạt ChatGPT Plus tự động</div>
                 <div class="flex items-center space-x-3">
-                    <button onclick="toggleLang()" class="flex items-center gap-1.5 bg-blue-800 dark:bg-blue-900/50 px-3 py-1.5 rounded-full border border-blue-700 dark:border-blue-700/50 text-sm font-bold shadow-sm">
+                    <button onclick="toggleLang()" class="flex items-center gap-1.5 bg-blue-800 dark:bg-blue-900/50 hover:bg-blue-700 dark:hover:bg-blue-800 px-3 py-1.5 rounded-full border border-blue-700 dark:border-blue-700/50 text-sm font-bold shadow-sm">
                         <span id="lang-flag">🇻🇳</span> <span id="lang-text">VI</span>
                     </button>
                     <button onclick="toggleTheme()" class="p-2 rounded-full bg-blue-800 dark:bg-blue-900/50 border border-blue-700 dark:border-blue-700/50">
@@ -95,8 +93,12 @@
                             <h3 id="step1-title" class="text-base font-bold text-gray-900 dark:text-white mb-1">Chuẩn bị Key</h3>
                             <p id="step1-desc" class="text-sm text-gray-600 dark:text-gray-400 mb-3">Mua mã Key chính hãng tại Legit Shop.</p>
                             <div class="flex flex-wrap gap-3">
-                                <a href="https://zalo.me/0816522665" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold bg-[#0068FF] text-white px-3 py-2 rounded-lg"><i data-lucide="message-circle" class="w-4 h-4"></i> <span id="btn-zalo">Zalo</span></a>
-                                <a href="buy.html" class="inline-flex items-center gap-1.5 text-xs font-semibold bg-slate-100 text-slate-700 px-3 py-2 rounded-lg border shadow-sm"><i data-lucide="shopping-cart" class="w-4 h-4"></i> <span id="btn-buy">Mua tại đây</span></a>
+                                <a href="https://zalo.me/0816522665" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold bg-[#0068FF] text-white px-3 py-2 rounded-lg transition-colors shadow-sm">
+                                    <i data-lucide="message-circle" class="w-4 h-4"></i> <span id="btn-zalo">Liên hệ Zalo</span>
+                                </a>
+                                <a href="buy.html" class="inline-flex items-center gap-1.5 text-xs font-semibold bg-slate-100 text-slate-700 px-3 py-2 rounded-lg border border-slate-200 shadow-sm">
+                                    <i data-lucide="shopping-cart" class="w-4 h-4"></i> <span id="btn-buy">Mua tại đây</span>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -106,8 +108,8 @@
                             <h3 id="step2-title" class="text-base font-bold text-gray-900 dark:text-white mb-1">Lấy Session</h3>
                             <p id="step2-desc" class="text-sm text-gray-600 dark:text-gray-400 mb-3">Đăng nhập ChatGPT và lấy dữ liệu Auth Session.</p>
                             <div class="flex flex-wrap gap-3">
-                                <a href="https://chatgpt.com" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold bg-emerald-600 text-white px-3 py-2 rounded-lg shadow-sm"><i data-lucide="external-link" class="w-4 h-4"></i> <span id="btn-opengpt">Mở ChatGPT</span></a>
-                                <a href="https://chatgpt.com/api/auth/session" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold bg-indigo-600 text-white px-3 py-2 rounded-lg shadow-sm"><i data-lucide="copy" class="w-4 h-4"></i> <span id="btn-getsession">Lấy Session</span></a>
+                                <a href="https://chatgpt.com" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold bg-emerald-600 text-white px-3 py-2 rounded-lg shadow-sm hover:bg-emerald-700"><i data-lucide="external-link" class="w-4 h-4"></i> <span id="btn-opengpt">Mở ChatGPT.com</span></a>
+                                <a href="https://chatgpt.com/api/auth/session" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold bg-indigo-600 text-white px-3 py-2 rounded-lg shadow-sm hover:bg-indigo-700"><i data-lucide="copy" class="w-4 h-4"></i> <span id="btn-getsession">Lấy Session</span></a>
                             </div>
                         </div>
                     </div>
@@ -115,7 +117,7 @@
                         <div class="w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-400 font-bold flex items-center justify-center border shrink-0">3</div>
                         <div>
                             <h3 id="step3-title" class="text-base font-bold text-gray-900 dark:text-white mb-1">Kích hoạt</h3>
-                            <p id="step3-desc" class="text-sm text-gray-600 dark:text-gray-400">Dán mã Key và bấm Xác Nhận.</p>
+                            <p id="step3-desc" class="text-sm text-gray-600 dark:text-gray-400">Dán mã Key và bấm Xác Nhận. Hệ thống sẽ tự động hoàn tất cho bạn.</p>
                         </div>
                     </div>
                 </div>
@@ -135,17 +137,17 @@
                     <div id="tab-activation" class="tab-content active">
                         <div class="text-center mb-8">
                             <h1 id="act-title" class="text-2xl font-extrabold text-gray-900 dark:text-white mb-2">Kích Hoạt Dịch Vụ</h1>
-                            <p id="act-desc" class="text-sm text-gray-500 dark:text-gray-400">Nhập mã Key từ Legit Shop.</p>
+                            <p id="act-desc" class="text-sm text-gray-500 dark:text-gray-400">Nhập mã Key từ Legit Shop để bắt đầu.</p>
                         </div>
                         <form id="form-activation" onsubmit="handleActivation(event)">
                             <div class="mb-6">
                                 <label id="act-label" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Mã Code Kích Hoạt</label>
                                 <div class="relative">
                                     <i data-lucide="barcode" class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400"></i>
-                                    <input type="text" id="input-activation" class="block w-full pl-12 pr-4 py-3.5 bg-gray-50 dark:bg-gray-900/50 border border-gray-300 dark:border-gray-600 rounded-xl text-gray-900 dark:text-white font-mono uppercase" placeholder="VD: LEGIT-HADES68..." required>
+                                    <input type="text" id="input-activation" class="block w-full pl-12 pr-4 py-3.5 bg-gray-50 dark:bg-gray-900/50 border border-gray-300 dark:border-gray-600 rounded-xl text-gray-900 dark:text-white font-mono uppercase focus:ring-2 focus:ring-blue-500 outline-none" placeholder="VD: LEGIT-HADES68..." required>
                                 </div>
                             </div>
-                            <button type="submit" id="btn-activation" class="w-full flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 px-4 rounded-xl transition-all shadow-lg">
+                            <button type="submit" id="btn-activation" class="w-full flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 px-4 rounded-xl transition-all shadow-lg active:scale-95 disabled:opacity-50">
                                 <span id="btnText-activation">Xác Nhận & Kích Hoạt</span>
                                 <i data-lucide="loader-2" id="spinner-activation" class="w-5 h-5 animate-spin hidden"></i>
                             </button>
@@ -157,22 +159,22 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Tab Kiểm Tra (Rút gọn cho nhanh) -->
+                    <!-- Tab Kiểm Tra -->
                     <div id="tab-check" class="tab-content">
                         <form id="form-check" onsubmit="handleCheck(event)">
                             <div class="mb-6">
                                 <label id="chk-label" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Mã Key Cần Tra Cứu</label>
-                                <div class="relative"><i data-lucide="search" class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400"></i><input type="text" id="input-check" class="block w-full pl-12 pr-4 py-3.5 bg-gray-50 dark:bg-gray-900/50 border border-gray-300 dark:border-gray-600 rounded-xl text-gray-900 dark:text-white font-mono" placeholder="Nhập Key..." required></div>
+                                <div class="relative"><i data-lucide="search" class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400"></i><input type="text" id="input-check" class="block w-full pl-12 pr-4 py-3.5 bg-gray-50 dark:bg-gray-900/50 border border-gray-300 dark:border-gray-600 rounded-xl text-gray-900 dark:text-white font-mono uppercase focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Nhập Key..." required></div>
                             </div>
-                            <button type="submit" id="btn-check" class="w-full bg-slate-800 text-white font-bold py-3.5 rounded-xl shadow-lg">
-                                <span id="btnText-check">Tra Cứu</span> <i data-lucide="loader-2" id="spinner-check" class="w-5 h-5 animate-spin hidden ml-2"></i>
+                            <button type="submit" id="btn-check" class="w-full bg-slate-800 text-white font-bold py-3.5 rounded-xl shadow-lg hover:bg-slate-900 active:scale-95 disabled:opacity-50">
+                                <span id="btnText-check">Tra Cứu Thông Tin</span> <i data-lucide="loader-2" id="spinner-check" class="w-5 h-5 animate-spin hidden ml-2"></i>
                             </button>
                         </form>
-                        <div id="alert-check" class="hidden mt-6 rounded-xl p-5 border bg-slate-50 dark:bg-gray-900/50 border-slate-200 dark:border-gray-700"><div class="flex items-start gap-3"><i data-lucide="info" class="text-blue-500"></i><div class="w-full"><h3 id="title-check" class="font-bold mb-3">Kết quả</h3><div id="msg-check" class="text-sm space-y-2"></div></div></div></div>
+                        <div id="alert-check" class="hidden mt-6 rounded-xl p-5 border bg-slate-50 dark:bg-gray-900/50 border-slate-200 dark:border-gray-700"><div class="flex items-start gap-3"><i data-lucide="info" class="text-blue-500 shrink-0"></i><div class="w-full"><h3 id="title-check" class="font-bold mb-3">Kết quả tra cứu</h3><div id="msg-check" class="text-sm space-y-2"></div></div></div></div>
                     </div>
                 </div>
-                <div class="bg-gray-50 dark:bg-gray-900/30 px-8 py-4 border-t border-gray-100 dark:border-gray-700/50 text-center">
-                    <p class="text-xs text-gray-500 flex justify-center items-center gap-1.5"><i data-lucide="shield-check" class="w-4 h-4 text-green-500"></i> <span id="footer-text">Mã hóa an toàn qua OpenCodex+</span></p>
+                <div class="bg-gray-50 dark:bg-gray-900/30 px-8 py-4 border-t border-gray-100 dark:border-gray-700/50 text-center mt-auto">
+                    <p class="text-xs text-gray-500 flex justify-center items-center gap-1.5"><i data-lucide="shield-check" class="w-4 h-4 text-green-500"></i> <span id="footer-text">Hệ thống GitHub mã hóa qua Proxy AllOrigins</span></p>
                 </div>
             </div>
         </div>
@@ -182,13 +184,13 @@
         const i18n = {
             vi: {
                 pageTitle: "Legit Shop - Kích hoạt ChatGPT Plus",
-                loading: "Đang tải hệ thống...",
+                loading: "Đang kết nối API OpenCodex...",
                 navTitle: "Hệ thống kích hoạt ChatGPT Plus tự động",
                 guideTitle: "Hướng Dẫn Kích Hoạt",
                 guideSubtitle: "Hoàn tất quá trình với 3 bước đơn giản.",
                 btnZalo: "Liên hệ Zalo",
                 btnBuy: "Mua tại đây",
-                btnOpenGpt: "Mở ChatGPT",
+                btnOpenGpt: "Mở ChatGPT.com",
                 btnGetSession: "Lấy Session",
                 tabAct: "Kích Hoạt Key",
                 tabChk: "Kiểm Tra Key",
@@ -196,18 +198,18 @@
                 actBtn: "Xác Nhận & Kích Hoạt",
                 processing: "Đang xác thực...",
                 waiting: "Đang xử lý...",
-                waitingDesc: "Vui lòng đợi 10-30s để hoàn tất.",
+                waitingDesc: "Máy chủ OpenCodex đang áp dụng mã. Vui lòng đợi 10-30s.",
                 actSuccess: "Thành Công!",
-                actSuccessDesc: "Key của bạn đã được kích hoạt.",
+                actSuccessDesc: "Key của bạn đã được kích hoạt hoàn tất.",
                 actFail: "Thất bại",
-                errInvalid: "Mã không hợp lệ.",
-                fetching: "Đang tải...",
+                errInvalid: "Mã không hợp lệ hoặc lỗi Proxy.",
+                fetching: "Đang tải dữ liệu...",
                 statusActivated: "Đã Kích Hoạt",
                 statusPending: "Chưa Sử Dụng"
             },
             en: {
                 pageTitle: "Legit Shop - ChatGPT Activation",
-                loading: "Loading...",
+                loading: "Connecting to OpenCodex...",
                 navTitle: "Auto ChatGPT Plus Activation",
                 guideTitle: "Activation Guide",
                 guideSubtitle: "3 simple steps to activate.",
@@ -221,11 +223,11 @@
                 actBtn: "Confirm & Activate",
                 processing: "Processing...",
                 waiting: "Processing...",
-                waitingDesc: "Please wait 10-30s.",
+                waitingDesc: "Please wait 10-30s for server to apply.",
                 actSuccess: "Success!",
-                actSuccessDesc: "Key activated.",
+                actSuccessDesc: "Key activated successfully.",
                 actFail: "Failed",
-                errInvalid: "Invalid code.",
+                errInvalid: "Invalid code or Proxy error.",
                 fetching: "Fetching...",
                 statusActivated: "Activated",
                 statusPending: "Unused"
@@ -257,88 +259,90 @@
             document.getElementById('btnText-activation').textContent = tr.actBtn;
         }
 
-        // --- CẬP NHẬT LOGIC PROXY CHO GITHUB PAGES ---
-        // Sử dụng Proxy AllOrigins để vượt lỗi CORS khi chạy trên GitHub
+        // --- CẤU HÌNH API OPENCODEX TRỰC TIẾP QUA PROXY GITHUB ---
         const CODEX_API = 'https://opencodex.plus/api/redeem';
-        const PROXY_URL = 'https://api.allorigins.win/get?url=';
+        
+        // Proxy AllOrigins: Hỗ trợ GitHub Pages (HTTPS) rất tốt
+        const PROXY_WRAPPER = 'https://api.allorigins.win/get?url=';
 
-        async function safeFetch(endpoint, options = {}) {
+        /**
+         * Hàm fetch qua proxy để vượt lỗi CORS của GitHub
+         */
+        async function fetchThroughProxy(endpoint, options = {}) {
             const targetUrl = CODEX_API + endpoint;
             
-            // Đối với GitHub Pages, chúng ta gọi qua AllOrigins Proxy
-            const response = await fetch(`${PROXY_URL}${encodeURIComponent(targetUrl)}`);
-            if (!response.ok) throw new Error("Lỗi Proxy: Không thể kết nối máy chủ gốc.");
+            // Nếu là GET request
+            if (!options.method || options.method === 'GET') {
+                const response = await fetch(`${PROXY_WRAPPER}${encodeURIComponent(targetUrl)}`);
+                if (!response.ok) throw new Error("Cầu nối Proxy bị lỗi.");
+                const data = await response.json();
+                return JSON.parse(data.contents); // AllOrigins bọc kết quả trong field 'contents'
+            } 
             
-            const wrapper = await response.json();
-            // AllOrigins trả về data dưới dạng String trong field 'contents'
-            try {
-                const data = JSON.parse(wrapper.contents);
-                return data;
-            } catch (e) {
-                // Nếu không parse được JSON, có thể AllOrigins bị chặn bởi Cloudflare của OpenCodex
-                throw new Error("Lỗi: Máy chủ gốc từ chối kết nối qua Proxy (Cloudflare block).");
-            }
+            // Nếu là POST request (Kích hoạt)
+            // Lưu ý: AllOrigins GET wrapper chỉ dùng được cho GET. 
+            // Chúng ta sử dụng corsproxy.io như phương án dự phòng cho POST.
+            const postProxy = 'https://corsproxy.io/?' + encodeURIComponent(targetUrl);
+            const response = await fetch(postProxy, options);
+            if (!response.ok) throw new Error("Yêu cầu kích hoạt bị từ chối.");
+            return await response.json();
         }
-
-        // Lưu ý: Đối với POST request (Kích hoạt), Proxy AllOrigins.win chỉ hỗ trợ GET.
-        // Để Kích hoạt (POST), chúng ta sẽ dùng Proxy chuyên biệt hơn: CORS-Anywhere hoặc chuyển về VPS Proxy.
-        // NHƯNG để GitHub hoạt động đơn giản nhất, tôi sẽ chuyển luồng POST về thẳng VPS của bạn (Nếu bạn vẫn giữ VPS).
-        
-        const VPS_PROXY = 'https://zunmichael.com/api/proxy'; // <--- HÃY THAY TÊN MIỀN VPS ĐÃ CÀI SSL CỦA BẠN VÀO ĐÂY
 
         async function handleActivation(event) {
             event.preventDefault();
             const code = document.getElementById('input-activation').value.trim().toUpperCase();
-            const tr = t();
             if (!code) return;
-            setLoadingState('activation', true, tr.processing);
+            
+            setLoadingState('activation', true, t().processing);
             hideAlert('activation');
 
             try {
-                // Thử gọi qua VPS Proxy (Cách an toàn nhất để tránh Cloudflare)
-                // Lưu ý: Phải dùng https trên VPS mới chạy được trên GitHub
-                const res = await fetch(`${VPS_PROXY}/activate`, {
+                // Gọi POST /activate
+                const data = await fetchThroughProxy('/activate', {
                     method: 'POST',
                     headers: {'Content-Type': 'application/json'},
                     body: JSON.stringify({ code })
                 });
-                const data = await res.json();
-                if (!res.ok) throw new Error(data.message || tr.errInvalid);
-                
-                showAlert('activation', 'info', tr.waiting, tr.waitingDesc);
+
+                showAlert('activation', 'info', t().waiting, t().waitingDesc);
                 pollActivationStatus(code);
             } catch (error) {
                 setLoadingState('activation', false);
-                showAlert('activation', 'error', tr.actFail, error.message + " (Gợi ý: VPS của bạn cần cài SSL https mới chạy được với GitHub)");
+                showAlert('activation', 'error', t().actFail, error.message);
             }
         }
 
         async function pollActivationStatus(code) {
-            const tr = t();
             try {
-                // Polling trạng thái có thể dùng AllOrigins GET vì nó nhẹ hơn
-                const data = await safeFetch(`/keys/${code}/activation`);
+                // Gọi GET /keys/:code/activation
+                const data = await fetchThroughProxy(`/keys/${code}/activation`);
                 if (data.status === 'activated') {
                     setLoadingState('activation', false);
-                    showAlert('activation', 'success', tr.actSuccess, tr.actSuccessDesc);
-                } else {
-                    setTimeout(() => pollActivationStatus(code), 3000);
+                    showAlert('activation', 'success', t().actSuccess, t().actSuccessDesc);
+                    document.getElementById('input-activation').value = '';
+                } else if (data.status === 'activating' || data.status === 'pending') {
+                    setTimeout(() => pollActivationStatus(code), 3500);
                 }
-            } catch (e) { /* Lỗi im lặng để tiếp tục thử lại */ }
+            } catch (e) {
+                // Nếu lỗi mạng tạm thời, tiếp tục thử lại sau 5s
+                setTimeout(() => pollActivationStatus(code), 5000);
+            }
         }
 
         async function handleCheck(event) {
             event.preventDefault();
             const code = document.getElementById('input-check').value.trim().toUpperCase();
-            const tr = t();
-            setLoadingState('check', true, tr.fetching);
+            if (!code) return;
+            
+            setLoadingState('check', true, t().fetching);
             try {
-                const data = await safeFetch(`/keys/${code}`);
+                // Gọi GET /keys/:code
+                const data = await fetchThroughProxy(`/keys/${code}`);
                 setLoadingState('check', false);
                 showCheckResult(data);
             } catch (e) {
                 setLoadingState('check', false);
-                alert(e.message);
+                alert("Lỗi: " + e.message);
             }
         }
 
@@ -348,36 +352,64 @@
             box.classList.remove('hidden');
             let statusText = data.status === 'activated' ? tr.statusActivated : tr.statusPending;
             let color = data.status === 'activated' ? 'text-green-600' : 'text-blue-600';
-            msg.innerHTML = `<div class="flex justify-between border-b pb-2"><span>Key:</span><span class="font-mono font-bold">${data.code}</span></div>
-                             <div class="flex justify-between pt-2"><span>Status:</span><span class="font-bold ${color}">${statusText}</span></div>`;
+            msg.innerHTML = `
+                <div class="flex justify-between border-b border-gray-100 dark:border-gray-700 pb-2">
+                    <span class="text-gray-500">Mã Key:</span>
+                    <span class="font-mono font-bold">${data.code || 'N/A'}</span>
+                </div>
+                <div class="flex justify-between pt-2">
+                    <span class="text-gray-500">Trạng thái:</span>
+                    <span class="font-bold ${color}">${statusText}</span>
+                </div>`;
         }
 
-        // --- UTILS ---
+        // --- HÀM TIỆN ÍCH ---
         function switchTab(id) {
             document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
             document.getElementById('tab-'+id).classList.add('active');
+            const btns = ['activation', 'check'];
+            btns.forEach(b => {
+                const btn = document.getElementById('tabBtn-'+b);
+                if(b === id) {
+                    btn.classList.add('text-blue-600', 'border-blue-600', 'bg-blue-50/50');
+                    btn.classList.remove('text-gray-500', 'border-transparent');
+                } else {
+                    btn.classList.remove('text-blue-600', 'border-blue-600', 'bg-blue-50/50');
+                    btn.classList.add('text-gray-500', 'border-transparent');
+                }
+            });
             lucide.createIcons();
         }
+
         function setLoadingState(p, l, txt) {
-            const btn = document.getElementById('btnText-'+p), spin = document.getElementById('spinner-'+p);
-            btn.textContent = l ? txt : (p==='activation' ? t().actBtn : 'Tra Cứu');
+            const btn = document.getElementById('btn-'+p), btnTxt = document.getElementById('btnText-'+p), spin = document.getElementById('spinner-'+p);
+            btn.disabled = l;
+            btnTxt.textContent = l ? txt : (p==='activation' ? t().actBtn : 'Tra Cứu Thông Tin');
             spin.classList.toggle('hidden', !l);
         }
+
         function showAlert(p, type, title, msg) {
             const box = document.getElementById('alert-'+p), tEl = document.getElementById('title-'+p), mEl = document.getElementById('msg-'+p), icon = document.getElementById('icon-'+p);
             box.className = `mt-6 rounded-xl p-4 border text-sm fade-in ${type==='success'?'bg-green-50 text-green-800 border-green-200':'bg-blue-50 text-blue-800 border-blue-200'}`;
             if(type==='error') box.classList.add('bg-red-50', 'text-red-800', 'border-red-200');
             tEl.textContent = title; mEl.textContent = msg; box.classList.remove('hidden');
-            icon.innerHTML = type==='success' ? '<i data-lucide="check-circle" class="text-green-500 w-5 h-5"></i>' : '<i data-lucide="info" class="text-blue-500 w-5 h-5"></i>';
+            icon.innerHTML = type==='success' ? '<i data-lucide="check-circle" class="text-green-500 w-5 h-5"></i>' : (type==='info' ? '<i data-lucide="loader-2" class="text-blue-500 w-5 h-5 animate-spin"></i>' : '<i data-lucide="alert-circle" class="text-red-500 w-5 h-5"></i>');
             lucide.createIcons();
         }
+
         function hideAlert(p) { document.getElementById('alert-'+p).classList.add('hidden'); }
 
-        // Canvas & Icons
+        // --- KHỞI TẠO ---
         window.addEventListener('load', () => { 
             lucide.createIcons(); applyTranslations(); initCanvas(); animateNetwork();
-            setTimeout(() => document.getElementById('preloader').style.display='none', 800);
+            setTimeout(() => {
+                const p = document.getElementById('preloader');
+                p.classList.add('opacity-0');
+                setTimeout(() => p.style.display='none', 700);
+            }, 800);
         });
+
+        // Background
         const canvas = document.getElementById('network-canvas'), ctx = canvas.getContext('2d');
         let particles = [];
         function initCanvas() {
@@ -399,6 +431,7 @@
             document.getElementById('theme-icon-light').classList.toggle('hidden', !isDark);
             document.getElementById('theme-icon-dark').classList.toggle('hidden', isDark);
         }
+        window.addEventListener('resize', initCanvas);
     </script>
 </body>
 </html>
